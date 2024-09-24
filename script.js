@@ -6,6 +6,7 @@ let myItensList = []
 
 function addNewValue() {
     myItensList.push(input.value)
+    input.value = ''
     showNewTask()
 }
 // nova função para mostrar as tarefas:
@@ -21,5 +22,6 @@ function showNewTask() {
         </li>
         `
     })
+    completeList.innerHTML = newTask
 }
 button.addEventListener('click', addNewValue)
