@@ -1,9 +1,10 @@
-const tasksModel = require('../models/taskModel');
+const tasksModel = require('../models/tasksModels');
 const getAll = async (re, res) => {
-   const tasks = tasksModel.getAll();
+   const tasks = await tasksModel.getAll();
 
-   return res.status(200).json(tasks);
-}
+   return res.status(200).json(taks);
+};
+
  module.exports = {
     getAll
  };
