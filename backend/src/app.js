@@ -1,10 +1,13 @@
 const express = require('express');
 const router = require('./router');
+const cors = require('cors');
 
 const app = express();
 
 app.use(router);
+app.use(express.json());
+app.use(cors());
 
-app.get('/', (req, res) => res.status(200).send('hello, world!'));
+
 
 module.exports = app;
