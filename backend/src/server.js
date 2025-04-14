@@ -1,7 +1,7 @@
 const app = require('./app');
 require('dotenv').config();
 
-const PORT = process.env.PORT || 3333;
+const PORT = process.env.PORT || 3306;
 
 app.get('/', (req,res) => res.status(200).send('Olá. mundo!'));
 
